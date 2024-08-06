@@ -47,12 +47,21 @@
   ======================================================== -->
   </head>
 
-  <body class="index-page">
+  <body class="index-page" data-theme="light">
     <header
       id="header"
       class="header d-flex flex-column justify-content-center"
     >
       <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle-btn"
+        title="Toggles light & dark"
+        aria-label="auto"
+      >
+        <i id="theme-icon" class="bi bi-moon"></i>
+      </button>
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -64,6 +73,12 @@
           <li>
             <a href="#about"
               ><i class="bi bi-person navicon"></i><span>About</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills"
+              ><i class="bi bi-lightning-charge navicon"></i
+              ><span>Skills</span></a
             >
           </li>
           <li>
@@ -83,7 +98,7 @@
 
     <main class="main">
       <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background">
+      <section id="hero" class="hero section light-background">
         <img src="assets/img/hero-bg.jpg" alt="" />
 
         <div class="container" data-aos="zoom-out">
@@ -91,7 +106,8 @@
             <div class="col-lg-9">
               <p>Hi, I'm</p>
               <h2>David Dzakpasu,</h2>
-              <p><span
+              <p>
+                <span
                   class="typed"
                   data-typed-items="Full-Stack Developer, Software Engineer, Freelancer"
                   >Full-Stack Developer</span
@@ -112,7 +128,6 @@
           </div>
         </div>
       </section>
-      <!-- /Hero Section -->
 
       <section id="about" class="about section">
         <div class="container section-title" data-aos="fade-up">

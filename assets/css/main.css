@@ -18,13 +18,31 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+body[data-theme="light"] {
+  --background-color: #ffffff;
+  --default-color: #272829;
+  --heading-color: #45505b;
+  --accent-color: #0563bb;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+
+body[data-theme="dark"] {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --accent-color: #0563bb;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -192,7 +210,7 @@ h6 {
   cursor: pointer;
   position: fixed;
   top: 15px;
-  right: 15px;
+  right: 70px;
   z-index: 9999;
   transition: background-color 0.3s;
 }
@@ -274,6 +292,39 @@ h6 {
 .navmenu a:hover span,
 .navmenu li:hover>a span {
   display: block;
+}
+/*--------------------------------------------------------------
+# Theme toggle button
+--------------------------------------------------------------*/
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--contrast-color);
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+}
+
+.header .header-toggle:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+
+/* Theme Icon */
+#theme-icon {
+  font-size: 1.3rem;
+}
+
+/* Light theme icon color */
+body:not(.dark-theme) #theme-icon {
+  color: var(--default-color);
+}
+
+/* Dark theme icon color */
+body.dark-theme #theme-icon {
+  color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
