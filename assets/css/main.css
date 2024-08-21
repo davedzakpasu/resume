@@ -749,6 +749,10 @@ section,
   background-color: var(--accent-color);
 }
 
+.skills li {
+  list-style-type: none;
+}
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
